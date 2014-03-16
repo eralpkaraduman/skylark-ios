@@ -9,7 +9,7 @@
             <objects>
                 <navigationController definesPresentationContext="YES" id="1x7-mh-y8v" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tab_explore" id="vmJ-BV-tL9">
-                        <inset key="imageInsets" minX="-8" minY="5" maxX="8" maxY="-5"/>
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="N9d-gT-GdN">
                         <autoresizingMask key="autoresizingMask"/>
@@ -101,7 +101,7 @@
             <objects>
                 <navigationController definesPresentationContext="YES" id="lwO-hp-mDO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tab_conversation" id="3hn-Lk-EFL">
-                        <inset key="imageInsets" minX="2" minY="5" maxX="-2" maxY="-5"/>
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OHp-c9-awp">
@@ -120,7 +120,7 @@
             <objects>
                 <navigationController definesPresentationContext="YES" id="D15-xK-Zv6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tab_home" id="viw-cG-Ibn">
-                        <inset key="imageInsets" minX="-2" minY="5" maxX="2" maxY="-5"/>
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SmY-1Y-McP">
                         <autoresizingMask key="autoresizingMask"/>
@@ -223,7 +223,7 @@
             <objects>
                 <navigationController definesPresentationContext="YES" id="WUR-k9-NdS" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tab_sell" id="Z8b-5h-FFQ">
-                        <inset key="imageInsets" minX="-5" minY="5" maxX="5" maxY="-5"/>
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ren-8O-xrV">
@@ -272,11 +272,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tab_conversation" width="49" height="38"/>
-        <image name="tab_explore" width="37" height="37"/>
-        <image name="tab_home" width="38" height="38"/>
-        <image name="tab_profile" width="38" height="38"/>
-        <image name="tab_sell" width="49" height="38"/>
+        <image name="tab_conversation" width="32" height="25"/>
+        <image name="tab_explore" width="25" height="25"/>
+        <image name="tab_home" width="25" height="25"/>
+        <image name="tab_profile" width="25" height="25"/>
+        <image name="tab_sell" width="32" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

@@ -20,7 +20,7 @@
     
     [self setSelectedIndex:1];
     
-    [[UITabBar appearance] setTintColor:[UIColor colorWithHex:0xffD35E69]];
+    [[UITabBar appearance] setTintColor:[UIColor colorWithHex:0xff72243D]];
     
     
     // Do any additional setup after loading the view.
