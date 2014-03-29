@@ -7,6 +7,7 @@
 //
 
 #import "TabBarController.h"
+#import "SKClient.h"
 
 @interface TabBarController ()
 
@@ -20,7 +21,10 @@
     
     [self setSelectedIndex:1];
     
-    [[UITabBar appearance] setTintColor:[UIColor colorWithHex:0xff72243D]];
+    //[[UITabBar appearance] setTintColor:[UIColor colorWithHex:0xffD35E69]];
+    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    //[SKClient sharedInstance]
     
     
     // Do any additional setup after loading the view.

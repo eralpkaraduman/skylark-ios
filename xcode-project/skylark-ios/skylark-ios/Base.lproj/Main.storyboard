@@ -33,7 +33,7 @@
                     <view key="view" contentMode="scaleToFill" id="kWj-FN-N1c">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="52C-9p-egM"/>
                 </viewController>
@@ -45,11 +45,15 @@
         <scene sceneID="Vex-rW-GRa">
             <objects>
                 <tabBarController id="8YX-ce-x5E" customClass="TabBarController" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" itemPositioning="fill" id="JQR-rB-NYL">
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" itemPositioning="fill" id="JQR-rB-NYL" customClass="DefaultTabBar">
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.22352942824363708" green="0.22352942824363708" blue="0.22352942824363708" alpha="1" colorSpace="deviceRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="D15-xK-Zv6" kind="relationship" relationship="viewControllers" id="sGn-hj-95Z"/>
@@ -63,10 +67,10 @@
             </objects>
             <point key="canvasLocation" x="132" y="180"/>
         </scene>
-        <!--First View Controller - First-->
+        <!--View Controller - First-->
         <scene sceneID="rAt-a0-eyY">
             <objects>
-                <viewController title="First" id="TDx-cK-NhD" customClass="FirstViewController" sceneMemberID="viewController">
+                <viewController title="First" id="TDx-cK-NhD" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L5O-cw-F63"/>
                         <viewControllerLayoutGuide type="bottom" id="ohU-Zh-dbf"/>
@@ -133,10 +137,10 @@
             </objects>
             <point key="canvasLocation" x="829" y="-981"/>
         </scene>
-        <!--First View Controller - First-->
+        <!--View Controller - First-->
         <scene sceneID="f5H-7G-siX">
             <objects>
-                <viewController title="First" id="LOr-4e-QkP" customClass="FirstViewController" sceneMemberID="viewController">
+                <viewController title="First" id="LOr-4e-QkP" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3oH-Tq-Ppi"/>
                         <viewControllerLayoutGuide type="bottom" id="dd1-M7-yAs"/>
@@ -185,10 +189,10 @@
             </objects>
             <point key="canvasLocation" x="829" y="1368"/>
         </scene>
-        <!--First View Controller - First-->
+        <!--View Controller - First-->
         <scene sceneID="Qpt-kB-Rm3">
             <objects>
-                <viewController title="First" id="nE9-bB-xJX" customClass="FirstViewController" sceneMemberID="viewController">
+                <viewController title="First" id="nE9-bB-xJX" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rS7-87-GET"/>
                         <viewControllerLayoutGuide type="bottom" id="Qow-ST-HOm"/>
@@ -237,10 +241,10 @@
             </objects>
             <point key="canvasLocation" x="829" y="180"/>
         </scene>
-        <!--First View Controller - First-->
+        <!--View Controller - First-->
         <scene sceneID="hvE-Oe-wEu">
             <objects>
-                <viewController title="First" id="6VC-mO-NBt" customClass="FirstViewController" sceneMemberID="viewController">
+                <viewController title="First" id="6VC-mO-NBt" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KzY-k5-Qrt"/>
                         <viewControllerLayoutGuide type="bottom" id="Qbf-gl-VQC"/>
