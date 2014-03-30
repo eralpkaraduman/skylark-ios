@@ -10,61 +10,25 @@
 
 @implementation SKClient
 
-static SKClient *SINGLETON = nil;
-static bool isFirstAccess = YES;
+static SKClient *_sharedClient = nil;
 
 + (instancetype)sharedInstance
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        isFirstAccess = NO;
-
-        NSURL *baseURL = [NSURL URLWithString:@"http://skylark-replicator.eralp.in/"];
-        SINGLETON = [SKClient clientWithBaseURL:baseURL clientID:@"client_id" secret:@"client_secret"];
         
+        [SKClient create];
     });
     
-    return SINGLETON;
+    return _sharedClient;
 }
 
-#pragma mark - Life Cycle
-
-+ (id) allocWithZone:(NSZone *)zone
-{
-    return [self sharedInstance];
++(void)create{
+    NSURL *baseURL = [NSURL URLWithString:@"http://skylark-replicator.eralp.in/"];
+    _sharedClient = [SKClient clientWithBaseURL:baseURL clientID:@"client_id" secret:@"client_secret"];
 }
 
-+ (id)copyWithZone:(struct _NSZone *)zone
-{
-    return [self sharedInstance];
-}
 
-+ (id)mutableCopyWithZone:(struct _NSZone *)zone
-{
-    return [self sharedInstance];
-}
-
-- (id)copy
-{
-    return [[SKClient alloc] init];
-}
-
-- (id)mutableCopy
-{
-    return [[SKClient alloc] init];
-}
-
-- (id) init
-{
-    if(SINGLETON){
-        return SINGLETON;
-    }
-    if (isFirstAccess) {
-        [self doesNotRecognizeSelector:_cmd];
-    }
-    self = [super init];
-    return self;
-}
 
 
 #warning TODO: implement auth https://github.com/AFNetworking/AFOAuth2Client#example-usage
