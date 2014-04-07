@@ -9,11 +9,17 @@
 #import "ExploreViewController.h"
 #import "SKListing.h"
 #import "ExploreThumbnailCell.h"
+#import "UINavigationItem+Attributes.h"
+
+
+@implementation FooterProgressView
+@end
 
 @interface ExploreViewController ()
 @property (nonatomic,strong) NSNumber *next_offset;
 @property (nonatomic,strong) NSArray *listings;
 @property (nonatomic,strong) AFHTTPRequestOperation *operation;
+@property (nonatomic,strong) FooterProgressView *footerProgressView;
 @end
 
 @implementation ExploreViewController
@@ -21,31 +27,41 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     [self reload];
 
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationItem addLogo];
+    [self setNeedsStatusBarAppearanceUpdate];
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
 -(void)reload{
     self.listings = [NSArray array];
     self.next_offset = [NSNumber numberWithInt:0];
     [self.collectionView reloadData];
-    [self loadMore];
+    //[self loadMore];
 }
 
 -(void)loadMore{
     
     [self.operation cancel];
+    
+    NSLog(@"no %@",self.next_offset);
+    
     self.operation = [SKListing exploreListingsWithOffset:[self.next_offset unsignedIntegerValue] withBlock:^(NSArray *listings, NSError *error, NSNumber *next_offset) {
         
         if(error == nil){
             
-            self.listings = listings;
             self.next_offset = next_offset;
+            self.listings = [self.listings arrayByAddingObjectsFromArray:listings];
             [self.collectionView reloadData];
             
-
-            //[self.collectionView setContentInset:UIEdgeInsetsMake(-44, 0, 0, 0)];
 
         }else{
             
@@ -79,40 +95,46 @@
     
 }
 
--(void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    NSLog(@"%@",NSStringFromUIEdgeInsets(self.collectionView.contentInset));
-    
-    //NSLog(@"%f",scrollView.contentOffset.y);
-}
-
--(void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
-    
-    //NSLog(@"%f",scrollView.contentOffset.y);
-    /*
-    if([self.operation isExecuting] == NO){
-        [self loadMore];
-    }
-    */
-}
-
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionReusableView *reusableview = nil;
     
-     static NSString *footerView = @"footerView";
-    
     if (kind == UICollectionElementKindSectionFooter) {
-        UICollectionReusableView *footerview = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:footerView forIndexPath:indexPath];
-        
-        reusableview = footerview;
-        
-        
-        
-
+        self.footerProgressView = (FooterProgressView*)[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footerView" forIndexPath:indexPath];
+        reusableview = self.footerProgressView;
     }
+    
+    [self bottomReached];
     
     return reusableview;
 }
+
+-(void)bottomReached{
+    
+    if(self.next_offset!=nil && [self.operation isExecuting]==NO){
+        [self.footerProgressView.activityIndicator startAnimating];
+        [self loadMore];
+    }else{
+        [self.footerProgressView.activityIndicator stopAnimating];
+    }
+    
+}
+
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section{
+    
+    CGSize footerSize = self.view.bounds.size;
+    
+    if(self.next_offset!=nil){
+        footerSize.height = 44;
+    }else{
+        footerSize.height = 0;
+    }
+    
+    return footerSize;
+    
+    
+}
+
 
 
 

@@ -35,7 +35,7 @@
                 [m_listings addObject:listing];
             }
             
-            NSNumber *next_offset = [responseObject valueForKeyPath:@"meta.next_offset"];
+            NSNumber *next_offset = [responseObject valueForKeyPath:@"pagination.next_offset"];
             
             block([NSArray arrayWithArray:m_listings],nil,next_offset);
         }

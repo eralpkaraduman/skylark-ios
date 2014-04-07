@@ -22,6 +22,9 @@
 		E32B4C7418E7282F00DFA676 /* SKListing.m in Sources */ = {isa = PBXBuildFile; fileRef = E32B4C7318E7282F00DFA676 /* SKListing.m */; };
 		E32B4C7718E729D300DFA676 /* SKListingMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = E32B4C7618E729D300DFA676 /* SKListingMedia.m */; };
 		E37107F218E74C84001277DA /* ExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E37107F118E74C84001277DA /* ExploreViewController.m */; };
+		E37BD66318F33BEA00FA250D /* DefaultNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E37BD66218F33BEA00FA250D /* DefaultNavigationController.m */; };
+		E37BD66618F3472E00FA250D /* BaseRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E37BD66518F3472E00FA250D /* BaseRootViewController.m */; };
+		E37BD66918F34D4000FA250D /* UINavigationItem+Attributes.m in Sources */ = {isa = PBXBuildFile; fileRef = E37BD66818F34D4000FA250D /* UINavigationItem+Attributes.m */; };
 		E38C9BF518D5E863007D7A46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38C9BF418D5E863007D7A46 /* Foundation.framework */; };
 		E38C9BF718D5E863007D7A46 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38C9BF618D5E863007D7A46 /* CoreGraphics.framework */; };
 		E38C9BF918D5E863007D7A46 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38C9BF818D5E863007D7A46 /* UIKit.framework */; };
@@ -46,7 +49,6 @@
 		E3B086D618E851570022734B /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B086CD18E851570022734B /* UIRefreshControl+AFNetworking.m */; };
 		E3B086D718E851570022734B /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B086CF18E851570022734B /* UIWebView+AFNetworking.m */; };
 		E3B086DA18E861D10022734B /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B086D918E861D10022734B /* UIImage+Color.m */; };
-		E3B086DD18E86B920022734B /* LoadMoreCollectionFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B086DC18E86B920022734B /* LoadMoreCollectionFooter.m */; };
 		E3B086E118E86E0C0022734B /* AFNetworkActivityLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B086E018E86E0C0022734B /* AFNetworkActivityLogger.m */; };
 		E3EBBEB918D610F2006659B4 /* CancelableScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EBBE9A18D610F2006659B4 /* CancelableScrollView.m */; };
 		E3EBBEBA18D610F2006659B4 /* CollectionsKeyValueFiltering.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EBBE9C18D610F2006659B4 /* CollectionsKeyValueFiltering.m */; };
@@ -63,6 +65,7 @@
 		E3EBBEC618D610F2006659B4 /* UIView+ResponderUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EBBEB418D610F2006659B4 /* UIView+ResponderUtilities.m */; };
 		E3EBBEC718D610F2006659B4 /* UIView+RoundedFrameOrigin.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EBBEB618D610F2006659B4 /* UIView+RoundedFrameOrigin.m */; };
 		E3EBBEC818D610F2006659B4 /* UIViewController+ScreenShot.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EBBEB818D610F2006659B4 /* UIViewController+ScreenShot.m */; };
+		E3F5CEB518F3388A00A74B53 /* DefaultNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F5CEB418F3388A00A74B53 /* DefaultNavigationBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +110,12 @@
 		E32B4C7618E729D300DFA676 /* SKListingMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKListingMedia.m; sourceTree = "<group>"; };
 		E37107F018E74C84001277DA /* ExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreViewController.h; sourceTree = "<group>"; };
 		E37107F118E74C84001277DA /* ExploreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExploreViewController.m; sourceTree = "<group>"; };
+		E37BD66118F33BEA00FA250D /* DefaultNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultNavigationController.h; sourceTree = "<group>"; };
+		E37BD66218F33BEA00FA250D /* DefaultNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultNavigationController.m; sourceTree = "<group>"; };
+		E37BD66418F3472E00FA250D /* BaseRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseRootViewController.h; sourceTree = "<group>"; };
+		E37BD66518F3472E00FA250D /* BaseRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseRootViewController.m; sourceTree = "<group>"; };
+		E37BD66718F34D4000FA250D /* UINavigationItem+Attributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+Attributes.h"; sourceTree = "<group>"; };
+		E37BD66818F34D4000FA250D /* UINavigationItem+Attributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+Attributes.m"; sourceTree = "<group>"; };
 		E38C9BF118D5E863007D7A46 /* skylark-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "skylark-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38C9BF418D5E863007D7A46 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E38C9BF618D5E863007D7A46 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -147,8 +156,6 @@
 		E3B086CF18E851570022734B /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		E3B086D818E861D10022734B /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
 		E3B086D918E861D10022734B /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
-		E3B086DB18E86B920022734B /* LoadMoreCollectionFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadMoreCollectionFooter.h; sourceTree = "<group>"; };
-		E3B086DC18E86B920022734B /* LoadMoreCollectionFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadMoreCollectionFooter.m; sourceTree = "<group>"; };
 		E3B086DF18E86E0C0022734B /* AFNetworkActivityLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityLogger.h; sourceTree = "<group>"; };
 		E3B086E018E86E0C0022734B /* AFNetworkActivityLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityLogger.m; sourceTree = "<group>"; };
 		E3EBBE9918D610F2006659B4 /* CancelableScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CancelableScrollView.h; sourceTree = "<group>"; };
@@ -181,6 +188,8 @@
 		E3EBBEB618D610F2006659B4 /* UIView+RoundedFrameOrigin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundedFrameOrigin.m"; sourceTree = "<group>"; };
 		E3EBBEB718D610F2006659B4 /* UIViewController+ScreenShot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ScreenShot.h"; sourceTree = "<group>"; };
 		E3EBBEB818D610F2006659B4 /* UIViewController+ScreenShot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ScreenShot.m"; sourceTree = "<group>"; };
+		E3F5CEB318F3388A00A74B53 /* DefaultNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultNavigationBar.h; sourceTree = "<group>"; };
+		E3F5CEB418F3388A00A74B53 /* DefaultNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultNavigationBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,8 +271,6 @@
 				E37107F118E74C84001277DA /* ExploreViewController.m */,
 				E3B086BB18E84A730022734B /* ExploreThumbnailCell.h */,
 				E3B086BC18E84A730022734B /* ExploreThumbnailCell.m */,
-				E3B086DB18E86B920022734B /* LoadMoreCollectionFooter.h */,
-				E3B086DC18E86B920022734B /* LoadMoreCollectionFooter.m */,
 			);
 			name = explore;
 			sourceTree = "<group>";
@@ -317,6 +324,14 @@
 				E38C9C2D18D60B44007D7A46 /* TabBarController.m */,
 				E32B4C4A18E6F32500DFA676 /* DefaultTabBar.h */,
 				E32B4C4B18E6F32500DFA676 /* DefaultTabBar.m */,
+				E3F5CEB318F3388A00A74B53 /* DefaultNavigationBar.h */,
+				E3F5CEB418F3388A00A74B53 /* DefaultNavigationBar.m */,
+				E37BD66118F33BEA00FA250D /* DefaultNavigationController.h */,
+				E37BD66218F33BEA00FA250D /* DefaultNavigationController.m */,
+				E37BD66418F3472E00FA250D /* BaseRootViewController.h */,
+				E37BD66518F3472E00FA250D /* BaseRootViewController.m */,
+				E37BD66718F34D4000FA250D /* UINavigationItem+Attributes.h */,
+				E37BD66818F34D4000FA250D /* UINavigationItem+Attributes.m */,
 			);
 			path = "skylark-ios";
 			sourceTree = "<group>";
@@ -469,6 +484,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = eralpkaraduman;
 				TargetAttributes = {
+					E38C9BF018D5E863007D7A46 = {
+						DevelopmentTeam = 6EEJM5R5MF;
+					};
 					E38C9C1418D5E863007D7A46 = {
 						TestTargetID = E38C9BF018D5E863007D7A46;
 					};
@@ -528,13 +546,14 @@
 				E3B086D718E851570022734B /* UIWebView+AFNetworking.m in Sources */,
 				E3EBBEBC18D610F2006659B4 /* GTMNSString+HTML.m in Sources */,
 				E32B4C6A18E6FA3A00DFA676 /* AFURLSessionManager.m in Sources */,
+				E37BD66618F3472E00FA250D /* BaseRootViewController.m in Sources */,
 				E3B086D618E851570022734B /* UIRefreshControl+AFNetworking.m in Sources */,
 				E3B086D018E851570022734B /* AFNetworkActivityIndicatorManager.m in Sources */,
 				E3EBBEBE18D610F2006659B4 /* NSString+HTML.m in Sources */,
 				E3EBBEBF18D610F2006659B4 /* NSURL+Parameters.m in Sources */,
+				E37BD66318F33BEA00FA250D /* DefaultNavigationController.m in Sources */,
 				E3B086D418E851570022734B /* UIImageView+AFNetworking.m in Sources */,
 				E3B086D318E851570022734B /* UIButton+AFNetworking.m in Sources */,
-				E3B086DD18E86B920022734B /* LoadMoreCollectionFooter.m in Sources */,
 				E3B086D118E851570022734B /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				E32B4C6E18E713D500DFA676 /* AFOAuth2Client.m in Sources */,
 				E3EBBEBA18D610F2006659B4 /* CollectionsKeyValueFiltering.m in Sources */,
@@ -557,11 +576,13 @@
 				E32B4C6318E6FA3A00DFA676 /* AFHTTPRequestOperationManager.m in Sources */,
 				E32B4C4C18E6F32500DFA676 /* DefaultTabBar.m in Sources */,
 				E3EBBEC818D610F2006659B4 /* UIViewController+ScreenShot.m in Sources */,
+				E37BD66918F34D4000FA250D /* UINavigationItem+Attributes.m in Sources */,
 				E3EBBEB918D610F2006659B4 /* CancelableScrollView.m in Sources */,
 				E32B4C6518E6FA3A00DFA676 /* AFNetworkReachabilityManager.m in Sources */,
 				E3B086E118E86E0C0022734B /* AFNetworkActivityLogger.m in Sources */,
 				E32B4C6918E6FA3A00DFA676 /* AFURLResponseSerialization.m in Sources */,
 				E3B086DA18E861D10022734B /* UIImage+Color.m in Sources */,
+				E3F5CEB518F3388A00A74B53 /* DefaultNavigationBar.m in Sources */,
 				E32B4C7418E7282F00DFA676 /* SKListing.m in Sources */,
 				E3EBBEBB18D610F2006659B4 /* GCPlaceholderTextView.m in Sources */,
 			);
@@ -688,6 +709,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "skylark-ios/skylark-ios-Prefix.pch";
 				INFOPLIST_FILE = "skylark-ios/skylark-ios-Info.plist";
@@ -701,6 +723,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "skylark-ios/skylark-ios-Prefix.pch";
 				INFOPLIST_FILE = "skylark-ios/skylark-ios-Info.plist";

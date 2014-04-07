@@ -19,10 +19,9 @@
     [NSURLCache setSharedURLCache:URLCache];
     
     [[AFNetworkActivityLogger sharedLogger] startLogging];
-    [[AFNetworkActivityLogger sharedLogger] setLevel:AFLoggerLevelInfo];
+    [[AFNetworkActivityLogger sharedLogger] setLevel:AFLoggerLevelWarn];
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
 
-    
     return YES;
 }
 							

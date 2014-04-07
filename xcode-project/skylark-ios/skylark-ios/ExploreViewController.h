@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ExploreViewController : UICollectionViewController
+@interface FooterProgressView : UICollectionReusableView
+@property (strong,nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@end
+
+
+@interface ExploreViewController : UICollectionViewController <UICollectionViewDelegateFlowLayout>
 
 @end

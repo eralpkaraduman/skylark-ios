@@ -30,11 +30,11 @@ static UIImage *placeholder = nil;
     __weak ExploreThumbnailCell *weak_self = self;
     [self.imageView setImageWithURLRequest:request placeholderImage:placeholder success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
         
-        [weak_self.imageView setAlpha:0];
+        //[weak_self.imageView setAlpha:0];
         [weak_self.imageView setImage:image];
-        [UIView animateWithDuration:0.3 animations:^{
-            [weak_self.imageView setAlpha:1];
-        }];
+        //[UIView animateWithDuration:0.3 animations:^{
+        //    [weak_self.imageView setAlpha:1];
+        //}];
         
     } failure:nil];
     

@@ -4,14 +4,16 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Default Navigation Controller-->
         <scene sceneID="RMc-Nc-sTA">
             <objects>
-                <navigationController definesPresentationContext="YES" id="1x7-mh-y8v" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="1x7-mh-y8v" customClass="DefaultNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tab_explore" id="vmJ-BV-tL9">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N9d-gT-GdN">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="N9d-gT-GdN" customClass="DefaultNavigationBar">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="hST-3O-p1Y">
@@ -31,7 +33,7 @@
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="oGK-GN-IXC" customClass="ExploreViewController" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="fK3-cK-ZkD">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="dj1-Fb-ggG">
@@ -42,7 +44,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="thumbnailCell" id="mRx-6o-c46" customClass="ExploreThumbnailCell">
-                                <rect key="frame" x="0.0" y="64" width="104" height="104"/>
+                                <rect key="frame" x="0.0" y="0.0" width="104" height="104"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="104" height="104"/>
@@ -67,11 +69,11 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="footerView" id="PoQ-W5-TGS" customClass="LoadMoreCollectionFooter">
-                            <rect key="frame" x="0.0" y="168" width="320" height="44"/>
+                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="footerView" id="PoQ-W5-TGS" customClass="FooterProgressView">
+                            <rect key="frame" x="0.0" y="104" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
-                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Egu-Ui-PRu">
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Egu-Ui-PRu">
                                     <rect key="frame" x="150" y="12" width="20" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="color" red="0.22352941330000001" green="0.22352941330000001" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -82,7 +84,7 @@
                                 <constraint firstAttribute="centerX" secondItem="Egu-Ui-PRu" secondAttribute="centerX" id="VIV-oq-8H3"/>
                             </constraints>
                             <connections>
-                                <outlet property="activity" destination="Egu-Ui-PRu" id="Q1X-xb-wOE"/>
+                                <outlet property="activityIndicator" destination="Egu-Ui-PRu" id="90C-aa-fbv"/>
                             </connections>
                         </collectionReusableView>
                         <connections>
@@ -101,7 +103,7 @@
             <objects>
                 <tabBarController id="8YX-ce-x5E" customClass="TabBarController" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
@@ -122,20 +124,20 @@
             </objects>
             <point key="canvasLocation" x="132" y="180"/>
         </scene>
-        <!--View Controller - First-->
+        <!--Base Root View Controller - First-->
         <scene sceneID="rAt-a0-eyY">
             <objects>
-                <viewController title="First" id="TDx-cK-NhD" sceneMemberID="viewController">
+                <viewController title="First" id="TDx-cK-NhD" customClass="BaseRootViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L5O-cw-F63"/>
                         <viewControllerLayoutGuide type="bottom" id="ohU-Zh-dbf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qZ8-GK-5zO">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="CONVERSATION WIP" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="Cy0-JB-JxA">
-                                <rect key="frame" x="20" y="158" width="280" height="81"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" text="CONVERSATION WIP" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="Cy0-JB-JxA">
+                                <rect key="frame" x="20" y="129" width="280" height="81"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
                                 <color key="textColor" red="0.76470589639999997" green="0.76862746479999999" blue="0.79215687509999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -155,14 +157,16 @@
             </objects>
             <point key="canvasLocation" x="1303" y="762"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Default Navigation Controller-->
         <scene sceneID="wpW-89-S3F">
             <objects>
-                <navigationController definesPresentationContext="YES" id="lwO-hp-mDO" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="lwO-hp-mDO" customClass="DefaultNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tab_conversation" id="3hn-Lk-EFL">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OHp-c9-awp">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="OHp-c9-awp" customClass="DefaultNavigationBar">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Rdg-by-r94">
@@ -177,14 +181,16 @@
             </objects>
             <point key="canvasLocation" x="829" y="762"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Default Navigation Controller-->
         <scene sceneID="Gf7-cK-LJi">
             <objects>
-                <navigationController definesPresentationContext="YES" id="D15-xK-Zv6" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="D15-xK-Zv6" customClass="DefaultNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tab_home" id="viw-cG-Ibn">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SmY-1Y-McP">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="SmY-1Y-McP" customClass="DefaultNavigationBar">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -195,20 +201,20 @@
             </objects>
             <point key="canvasLocation" x="829" y="-981"/>
         </scene>
-        <!--View Controller - First-->
+        <!--Base Root View Controller - First-->
         <scene sceneID="f5H-7G-siX">
             <objects>
-                <viewController title="First" id="LOr-4e-QkP" sceneMemberID="viewController">
+                <viewController title="First" id="LOr-4e-QkP" customClass="BaseRootViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3oH-Tq-Ppi"/>
                         <viewControllerLayoutGuide type="bottom" id="dd1-M7-yAs"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fK5-W6-OGR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="PROFILE WIP" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZNN-Ak-rnp">
-                                <rect key="frame" x="20" y="158" width="280" height="42"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" text="PROFILE WIP" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZNN-Ak-rnp">
+                                <rect key="frame" x="20" y="132" width="280" height="42"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" red="0.76470589639999997" green="0.76862746479999999" blue="0.79215687509999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -228,14 +234,16 @@
             </objects>
             <point key="canvasLocation" x="1303" y="1368"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Default Navigation Controller-->
         <scene sceneID="wdq-li-km9">
             <objects>
-                <navigationController definesPresentationContext="YES" id="qn4-aT-BhH" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="qn4-aT-BhH" customClass="DefaultNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tab_profile" id="O0O-oa-Uhh">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="edR-lF-7mj">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="edR-lF-7mj" customClass="DefaultNavigationBar">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="9HK-i5-GbN">
@@ -250,20 +258,20 @@
             </objects>
             <point key="canvasLocation" x="829" y="1368"/>
         </scene>
-        <!--View Controller - First-->
+        <!--Base Root View Controller - First-->
         <scene sceneID="Qpt-kB-Rm3">
             <objects>
-                <viewController title="First" id="nE9-bB-xJX" sceneMemberID="viewController">
+                <viewController title="First" id="nE9-bB-xJX" customClass="BaseRootViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rS7-87-GET"/>
                         <viewControllerLayoutGuide type="bottom" id="Qow-ST-HOm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Tut-Pz-GWn">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="HOME WIP" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Trk-t2-2Pa">
-                                <rect key="frame" x="20" y="158" width="280" height="42"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" text="HOME WIP" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Trk-t2-2Pa">
+                                <rect key="frame" x="20" y="132" width="280" height="42"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" red="0.76470589639999997" green="0.76862746479999999" blue="0.79215687509999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -283,14 +291,15 @@
             </objects>
             <point key="canvasLocation" x="1303" y="-981"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Default Navigation Controller-->
         <scene sceneID="AB8-GU-CeY">
             <objects>
-                <navigationController definesPresentationContext="YES" id="WUR-k9-NdS" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="WUR-k9-NdS" customClass="DefaultNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tab_sell" id="Z8b-5h-FFQ">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="Ren-8O-xrV">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Ren-8O-xrV" customClass="DefaultNavigationBar">
                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -306,10 +315,10 @@
             </objects>
             <point key="canvasLocation" x="829" y="180"/>
         </scene>
-        <!--View Controller - First-->
+        <!--Base Root View Controller - First-->
         <scene sceneID="hvE-Oe-wEu">
             <objects>
-                <viewController title="First" id="6VC-mO-NBt" sceneMemberID="viewController">
+                <viewController title="First" id="6VC-mO-NBt" customClass="BaseRootViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KzY-k5-Qrt"/>
                         <viewControllerLayoutGuide type="bottom" id="Qbf-gl-VQC"/>
