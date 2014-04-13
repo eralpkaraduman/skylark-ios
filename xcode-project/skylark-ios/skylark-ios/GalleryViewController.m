@@ -52,6 +52,9 @@
 }
 
 -(void)reload{
+    
+    [self.idleSpinner stopAnimating];
+    
     [self disposeOldItems];
     
     NSMutableArray *m_items = [NSMutableArray array];
@@ -77,9 +80,9 @@
     
     if(self.items.count<=0){
         [self.idleSpinner startAnimating];
-    }else{
-        [self.idleSpinner stopAnimating];
     }
+    
+
 }
 
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{

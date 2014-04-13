@@ -56,8 +56,6 @@
     
     [self.operation cancel];
     
-    NSLog(@"no %@",self.next_offset);
-    
     self.operation = [SKListing exploreListingsWithOffset:[self.next_offset unsignedIntegerValue] withBlock:^(NSArray *listings, NSError *error, NSNumber *next_offset) {
         
         if(error == nil){

@@ -334,6 +334,8 @@
 			children = (
 				E3094B8318FAE84C00991D5B /* GalleryViewController.h */,
 				E3094B8418FAE84C00991D5B /* GalleryViewController.m */,
+				E3094B8A18FB152600991D5B /* GalleryItemView.h */,
+				E3094B8B18FB152600991D5B /* GalleryItemView.m */,
 				E3094B8618FAE8FA00991D5B /* listingDetail */,
 				E37107EF18E74AC0001277DA /* explore */,
 				E38C9C0618D5E863007D7A46 /* Main.storyboard */,
@@ -353,8 +355,6 @@
 				E37BD66518F3472E00FA250D /* BaseRootViewController.m */,
 				E37BD66718F34D4000FA250D /* UINavigationItem+Attributes.h */,
 				E37BD66818F34D4000FA250D /* UINavigationItem+Attributes.m */,
-				E3094B8A18FB152600991D5B /* GalleryItemView.h */,
-				E3094B8B18FB152600991D5B /* GalleryItemView.m */,
 			);
 			path = "skylark-ios";
 			sourceTree = "<group>";

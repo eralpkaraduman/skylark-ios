@@ -29,8 +29,8 @@
 
 
 
--(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     
     if(self.dataShouldReload){
         [self reloadData];
@@ -39,26 +39,34 @@
 }
 
 -(void)reloadData{
-    [self displayData];
+    [self.gallery reload];
+    
     [self.operation cancel];
     self.operation = [self.listing loadDetailsWithBlock:^(NSError *error) {
         if(error == nil){
             self.dataShouldReload = NO;
-            [self displayData];
+            
+            if(self.listing.media.auto_res.count != self.gallery.media.auto_res.count){
+                self.gallery.media = self.listing.media;
+                [self.gallery reload];
+            }
+            
         }else{
             #warning TODO: implement displaying network error
         }
     }];
 }
 
-
+/*
 -(void)displayData{
     if(self.gallery!=nil){
-        self.gallery.media = self.listing.media;
-        [self.gallery reload];
+        if(self.gallery.media.auto_res.count == 0){
+            self.gallery.media = self.listing.media;
+ 
+        }
     }
 }
-
+*/
 
 - (void)didReceiveMemoryWarning
 {
@@ -71,7 +79,6 @@
         self.gallery = (GalleryViewController*)segue.destinationViewController;
         self.gallery.media = self.listing.media;
         self.gallery.heightConstraint = self.galleryHeightConstraint;
-        [self.gallery reload];
     }
 }
 
