@@ -10,6 +10,7 @@
 #import "SKListing.h"
 #import "ExploreThumbnailCell.h"
 #import "UINavigationItem+Attributes.h"
+#import "ListingDetailViewController.h"
 
 
 @implementation FooterProgressView
@@ -20,6 +21,7 @@
 @property (nonatomic,strong) NSArray *listings;
 @property (nonatomic,strong) AFHTTPRequestOperation *operation;
 @property (nonatomic,strong) FooterProgressView *footerProgressView;
+
 @end
 
 @implementation ExploreViewController
@@ -31,11 +33,13 @@
 
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
     [self.navigationItem addLogo];
     [self setNeedsStatusBarAppearanceUpdate];
 }
+
+
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
@@ -90,9 +94,19 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    SKListing *listing = [self.listings objectAtIndex:indexPath.item];
-    NSLog(@"listing id %i",listing.listingId);
     
+    
+    [self performSegueWithIdentifier:@"pushProductDetail" sender:self];
+    
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"pushProductDetail"]){
+        NSIndexPath *selectedIndexPath = [self.collectionView indexPathsForSelectedItems][0];
+        SKListing *listing = [self.listings objectAtIndex:selectedIndexPath.item];
+        ListingDetailViewController *listingDetail = (ListingDetailViewController*)segue.destinationViewController;
+        listingDetail.listing = listing;
+    }
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath

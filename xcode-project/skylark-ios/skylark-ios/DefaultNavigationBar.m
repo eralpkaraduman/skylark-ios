@@ -17,6 +17,10 @@
         //[self setBackgroundColor:[UIColor yellowColor]];
         
         [self setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHex:0xff8DB1BF]] forBarMetrics:UIBarMetricsDefault];
+        [self setTintColor:[UIColor whiteColor]];
+        [[UINavigationBar appearance] setTitleTextAttributes:@{
+                                                               NSForegroundColorAttributeName: [UIColor whiteColor]
+                                                               }];
     }
     return self;
 }

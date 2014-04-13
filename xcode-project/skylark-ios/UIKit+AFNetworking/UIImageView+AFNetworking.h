@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
+#import "AFHTTPRequestOperation.h"
 
 #import <Availability.h>
 
@@ -104,7 +105,7 @@
  @param success A block to be executed when the image request operation finishes successfully. This block has no return value and takes three arguments: the request sent from the client, the response received from the server, and the image created from the response data of request. If the image was returned from cache, the request and response parameters will be `nil`.
  @param failure A block object to be executed when the image request operation finishes unsuccessfully, or that finishes successfully. This block has no return value and takes three arguments: the request sent from the client, the response received from the server, and the error object describing the network or parsing error that occurred.
  */
-- (void)setImageWithURLRequest:(NSURLRequest *)urlRequest
+- (AFHTTPRequestOperation*)setImageWithURLRequest:(NSURLRequest *)urlRequest
               placeholderImage:(UIImage *)placeholderImage
                        success:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image))success
                        failure:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error))failure;

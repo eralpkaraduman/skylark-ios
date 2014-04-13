@@ -12,5 +12,6 @@
 @property (strong,nonatomic) NSURL *thumbnailURL;
 @property NSArray *low_res;
 @property NSArray *high_res;
+@property (nonatomic,readonly) NSArray *auto_res;
 -(id)initWithAttributes:(NSDictionary*)attributes;
 @end

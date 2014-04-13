@@ -14,10 +14,14 @@
 -(id)initWithAttributes:(NSDictionary*)attributes{
     self = [super init];
     if(self){
-        self.listingId = [[attributes valueForKeyPath:@"id"] unsignedIntegerValue];
-        self.media = [[SKListingMedia alloc] initWithAttributes:[attributes valueForKeyPath:@"media"]];
+        [self updateWithAttributes:attributes];
     }
     return self;
+}
+
+-(void)updateWithAttributes:(NSDictionary*)attributes{
+    self.listingId = [[attributes valueForKeyPath:@"id"] unsignedIntegerValue];
+    self.media = [[SKListingMedia alloc] initWithAttributes:[attributes valueForKeyPath:@"media"]];
 }
 
 +(AFHTTPRequestOperation *)exploreListingsWithOffset:(NSUInteger)offset withBlock:(void (^)(NSArray *listings, NSError *error, NSNumber *next_offset))block{
@@ -37,7 +41,9 @@
             
             NSNumber *next_offset = [responseObject valueForKeyPath:@"pagination.next_offset"];
             
-            block([NSArray arrayWithArray:m_listings],nil,next_offset);
+            if(block){
+                block([NSArray arrayWithArray:m_listings],nil,next_offset);
+            }
         }
         
         
@@ -51,4 +57,26 @@
     }];
 
 }
+
+-(AFHTTPRequestOperation *)loadDetailsWithBlock:(void (^)(NSError *error))block{
+    
+    return [[SKClient sharedInstance] GET:[NSString stringWithFormat:@"/listing/%@",[NSNumber numberWithUnsignedInteger:self.listingId]] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSDictionary *attributes = [responseObject valueForKeyPath:@"data"];
+        [self updateWithAttributes:attributes];
+        
+        if(block){
+            block(nil);
+        }
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        if(block){
+            block(error);
+        }
+        
+    }];
+    
+}
+
 @end

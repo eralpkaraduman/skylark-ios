@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E3094B8518FAE84C00991D5B /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3094B8418FAE84C00991D5B /* GalleryViewController.m */; };
+		E3094B8918FAE92400991D5B /* ListingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3094B8818FAE92400991D5B /* ListingDetailViewController.m */; };
+		E3094B8C18FB152600991D5B /* GalleryItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3094B8B18FB152600991D5B /* GalleryItemView.m */; };
 		E32B4C4C18E6F32500DFA676 /* DefaultTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E32B4C4B18E6F32500DFA676 /* DefaultTabBar.m */; };
 		E32B4C6218E6FA3A00DFA676 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E32B4C5018E6FA3A00DFA676 /* AFHTTPRequestOperation.m */; };
 		E32B4C6318E6FA3A00DFA676 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E32B4C5218E6FA3A00DFA676 /* AFHTTPRequestOperationManager.m */; };
@@ -79,6 +82,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E3094B8318FAE84C00991D5B /* GalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryViewController.h; sourceTree = "<group>"; };
+		E3094B8418FAE84C00991D5B /* GalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryViewController.m; sourceTree = "<group>"; };
+		E3094B8718FAE92400991D5B /* ListingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingDetailViewController.h; sourceTree = "<group>"; };
+		E3094B8818FAE92400991D5B /* ListingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingDetailViewController.m; sourceTree = "<group>"; };
+		E3094B8A18FB152600991D5B /* GalleryItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryItemView.h; sourceTree = "<group>"; };
+		E3094B8B18FB152600991D5B /* GalleryItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryItemView.m; sourceTree = "<group>"; };
 		E32B4C4A18E6F32500DFA676 /* DefaultTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultTabBar.h; sourceTree = "<group>"; };
 		E32B4C4B18E6F32500DFA676 /* DefaultTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultTabBar.m; sourceTree = "<group>"; };
 		E32B4C4F18E6FA3A00DFA676 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -216,6 +225,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E3094B8618FAE8FA00991D5B /* listingDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E3094B8718FAE92400991D5B /* ListingDetailViewController.h */,
+				E3094B8818FAE92400991D5B /* ListingDetailViewController.m */,
+			);
+			name = listingDetail;
+			sourceTree = "<group>";
+		};
 		E32B4C4D18E6F92500DFA676 /* skylarkAPI */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +332,9 @@
 		E38C9BFA18D5E863007D7A46 /* skylark-ios */ = {
 			isa = PBXGroup;
 			children = (
+				E3094B8318FAE84C00991D5B /* GalleryViewController.h */,
+				E3094B8418FAE84C00991D5B /* GalleryViewController.m */,
+				E3094B8618FAE8FA00991D5B /* listingDetail */,
 				E37107EF18E74AC0001277DA /* explore */,
 				E38C9C0618D5E863007D7A46 /* Main.storyboard */,
 				E38C9BFB18D5E863007D7A46 /* Supporting Files */,
@@ -332,6 +353,8 @@
 				E37BD66518F3472E00FA250D /* BaseRootViewController.m */,
 				E37BD66718F34D4000FA250D /* UINavigationItem+Attributes.h */,
 				E37BD66818F34D4000FA250D /* UINavigationItem+Attributes.m */,
+				E3094B8A18FB152600991D5B /* GalleryItemView.h */,
+				E3094B8B18FB152600991D5B /* GalleryItemView.m */,
 			);
 			path = "skylark-ios";
 			sourceTree = "<group>";
@@ -539,6 +562,7 @@
 			files = (
 				E32B4C6818E6FA3A00DFA676 /* AFURLRequestSerialization.m in Sources */,
 				E3B086BD18E84A730022734B /* ExploreThumbnailCell.m in Sources */,
+				E3094B8C18FB152600991D5B /* GalleryItemView.m in Sources */,
 				E32B4C6718E6FA3A00DFA676 /* AFURLConnectionOperation.m in Sources */,
 				E38C9C0518D5E863007D7A46 /* AppDelegate.m in Sources */,
 				E32B4C7718E729D300DFA676 /* SKListingMedia.m in Sources */,
@@ -547,8 +571,10 @@
 				E3EBBEBC18D610F2006659B4 /* GTMNSString+HTML.m in Sources */,
 				E32B4C6A18E6FA3A00DFA676 /* AFURLSessionManager.m in Sources */,
 				E37BD66618F3472E00FA250D /* BaseRootViewController.m in Sources */,
+				E3094B8918FAE92400991D5B /* ListingDetailViewController.m in Sources */,
 				E3B086D618E851570022734B /* UIRefreshControl+AFNetworking.m in Sources */,
 				E3B086D018E851570022734B /* AFNetworkActivityIndicatorManager.m in Sources */,
+				E3094B8518FAE84C00991D5B /* GalleryViewController.m in Sources */,
 				E3EBBEBE18D610F2006659B4 /* NSString+HTML.m in Sources */,
 				E3EBBEBF18D610F2006659B4 /* NSURL+Parameters.m in Sources */,
 				E37BD66318F33BEA00FA250D /* DefaultNavigationController.m in Sources */,

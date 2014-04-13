@@ -30,4 +30,12 @@
     return [NSArray arrayWithArray:m_array];
 }
 
+-(NSArray*)auto_res{
+    if([[UIScreen mainScreen] scale]>1){
+        return self.high_res;
+    }else{
+        return self.low_res;
+    }
+}
+
 @end

@@ -26,7 +26,7 @@
 
 #if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
 
-#import "AFHTTPRequestOperation.h"
+
 
 @interface AFImageCache : NSCache <AFImageCache>
 @end
@@ -118,7 +118,7 @@
     [self setImageWithURLRequest:request placeholderImage:placeholderImage success:nil failure:nil];
 }
 
-- (void)setImageWithURLRequest:(NSURLRequest *)urlRequest
+- (AFHTTPRequestOperation*)setImageWithURLRequest:(NSURLRequest *)urlRequest
               placeholderImage:(UIImage *)placeholderImage
                        success:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image))success
                        failure:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error))failure
@@ -163,6 +163,8 @@
 
         [[[self class] af_sharedImageRequestOperationQueue] addOperation:self.af_imageRequestOperation];
     }
+    
+    return self.af_imageRequestOperation;
 }
 
 - (void)cancelImageRequestOperation {
