@@ -7,6 +7,7 @@
 //
 
 #import "GalleryItemView.h"
+#import "UIImage+Color.h"
 
 @interface GalleryItemView(){
     
@@ -21,29 +22,37 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
+
+        [self setClipsToBounds:YES];
         [self setAutoresizesSubviews:YES];
         
-        self.progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
+        self.progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleBar];
         CGRect progressRect = self.bounds;
-        progressRect.origin.x = 60;
-        progressRect.size.width-= progressRect.origin.x*2;
+        
+        progressRect.origin.y = 0;
+        progressRect.size.height = 10.0f;
+        //progressRect.origin.x = 60;
+        //progressRect.size.width-= progressRect.origin.x*2;
         self.progressView.frame = progressRect;
-        self.progressView.center = self.center;
-        [self.progressView setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin];
+
+        //self.progressView.center = self.center;
+        [self.progressView setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin];
+
+        [self.progressView setProgressTintColor:[UIColor lightGrayColor]];
+        [self.progressView setTrackTintColor:[UIColor whiteColor]];
         
-        [self.progressView setTintColor:[UIColor colorWithHex:0xff8DB1BF]];
-        [self.progressView setTrackTintColor:[UIColor colorWithWhite:0.85 alpha:1]];
-        
-        [self.progressView setProgress:0];
+        [self.progressView setProgress:0 animated:NO];
         [self addSubview:self.progressView];
         
         
         self.imageView = [[UIImageView alloc] initWithFrame:self.bounds];
+        [self.imageView setAutoresizingMask:UIViewAutoresizingFlexibleHeight];
+        
+        
         [self.imageView setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
         [self.imageView setContentMode:UIViewContentModeScaleAspectFill];
         [self addSubview:self.imageView];
-
+        
         self.imageURL = imageURL;
         
         
@@ -59,19 +68,20 @@
     if(self.canLoad == NO)return;
     
     [self.imageView setImage:nil];
-    [self.progressView setProgress:0];
+    [self.progressView setProgress:0 animated:NO];
 
     __weak GalleryItemView *weakSelf = self;
     self.canLoad = NO;
-    //[weakSelf.imageView setAlpha:0];
+    [weakSelf.imageView setAlpha:0];
     
     AFHTTPRequestOperation *operation = [self.imageView setImageWithURLRequest:[NSURLRequest requestWithURL:self.imageURL] placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
          weakSelf.canLoad = NO;
         
-        [weakSelf.imageView setAlpha:0];
+        [weakSelf.progressView setProgress:1.0f animated:NO];
+
         [weakSelf.imageView setImage:image];
         
-        [UIView animateKeyframesWithDuration:0.2 delay:0 options:0 animations:^{
+        [UIView animateKeyframesWithDuration:0.4 delay:0 options:0 animations:^{
             [weakSelf.imageView setAlpha:1];
         } completion:nil];
         

@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "SKListing.h"
 
-@interface ListingDetailViewController : UIViewController
+@interface ListingDetailViewController : UIViewController <UIScrollViewDelegate>
 @property (strong,nonatomic) SKListing *listing;
 @end

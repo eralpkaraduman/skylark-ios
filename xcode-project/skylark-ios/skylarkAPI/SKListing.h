@@ -12,6 +12,7 @@
 
 @interface SKListing : NSObject
 @property (nonatomic,assign) NSUInteger listingId;
+@property (nonatomic,strong) NSString *title;
 @property (nonatomic,strong) SKListingMedia *media;
 -(id)initWithAttributes:(NSDictionary*)attributes;
 +(AFHTTPRequestOperation *)exploreListingsWithOffset:(NSUInteger)offset withBlock:(void (^)(NSArray *listings, NSError *error, NSNumber *next_offset))block;

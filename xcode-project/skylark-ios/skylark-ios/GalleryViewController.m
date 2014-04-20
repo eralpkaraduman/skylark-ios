@@ -68,6 +68,9 @@
         
         GalleryItemView *item = [[GalleryItemView alloc] initWithFrame:itemFrame imageURL:url];
         [m_items addObject:item];
+        
+        [item setAutoresizingMask:UIViewAutoresizingFlexibleHeight];
+        
         [self.scrollView addSubview:item];
 
         frame_x += self.scrollView.bounds.size.width;
@@ -90,6 +93,12 @@
     NSUInteger page = (scrollView.contentOffset.x + (0.5f * width)) / width;
     [self setCurrentPage:page];
 
+}
+
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.bounds.size.width*self.items.count, self.scrollView.bounds.size.height);
 }
 
 

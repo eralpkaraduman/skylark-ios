@@ -15,6 +15,8 @@
 @property GalleryViewController *gallery;
 @property (nonatomic,assign) BOOL dataShouldReload;
 @property IBOutlet NSLayoutConstraint *galleryHeightConstraint;
+@property (nonatomic,strong) IBOutlet UIScrollView *scrollView;
+@property (nonatomic,strong) IBOutlet NSLayoutConstraint *galleryTopSpaceConstraint;
 @end
 
 @implementation ListingDetailViewController
@@ -31,6 +33,10 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
+    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+    
+    self.scrollView.delegate = self;
     
     if(self.dataShouldReload){
         [self reloadData];
@@ -55,6 +61,40 @@
             #warning TODO: implement displaying network error
         }
     }];
+}
+
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    NSLog(@"l %f",scrollView.contentOffset.y);
+    
+    if(self.gallery){
+        CGRect galleryFrame = self.scrollView.bounds;
+        galleryFrame.size.height = MAX(340 - scrollView.contentOffset.y,340);
+        
+        
+        
+        galleryFrame.origin.y = MIN(scrollView.contentOffset.y,0);
+        //self.gallery.heightConstraint
+        
+        //galleryFrame.size.height = 340;
+        //galleryFrame.origin.y = scrollView.contentOffset.y;
+        // galleryFrame.size.height = 340 - scrollView.contentOffset.y;
+        
+        
+        NSLog(@"%@",NSStringFromCGRect(galleryFrame));
+        
+        self.gallery.view.frame = galleryFrame;
+    }
+    
+    //self.galleryTopSpaceConstraint.constant = MIN(scrollView.contentOffset.y,0);
+    //self.galleryHeightConstraint.constant = 340 + scrollView.contentOffset.y;
+    //self.galleryHeightConstraint.constant = 340 - scrollView.contentOffset.y;
+    
+    //UIEdgeInsets insets = UIEdgeInsetsZero;
+    //insets.top = scrollView.contentOffset.y;
+    //[self.scrollView setContentInset:insets];
+    
+    //[self.view layoutIfNeeded];
 }
 
 /*

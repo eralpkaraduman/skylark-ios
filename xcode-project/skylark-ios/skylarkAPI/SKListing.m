@@ -22,6 +22,7 @@
 -(void)updateWithAttributes:(NSDictionary*)attributes{
     self.listingId = [[attributes valueForKeyPath:@"id"] unsignedIntegerValue];
     self.media = [[SKListingMedia alloc] initWithAttributes:[attributes valueForKeyPath:@"media"]];
+    self.title = [attributes valueForKeyPath:@"title"];
 }
 
 +(AFHTTPRequestOperation *)exploreListingsWithOffset:(NSUInteger)offset withBlock:(void (^)(NSArray *listings, NSError *error, NSNumber *next_offset))block{
