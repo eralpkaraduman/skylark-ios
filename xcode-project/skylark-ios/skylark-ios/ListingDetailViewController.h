@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "SKListing.h"
+#import "SegmentedViewController.h"
 
-@interface ListingDetailViewController : UIViewController <UIScrollViewDelegate>
+@interface ListingDetailViewController : UIViewController <UIScrollViewDelegate, SegmentedViewControllerDelegate>
 @property (strong,nonatomic) SKListing *listing;
 @end

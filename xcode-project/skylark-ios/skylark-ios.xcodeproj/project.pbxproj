@@ -24,6 +24,7 @@
 		E32B4C7118E7215000DFA676 /* SKClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E32B4C7018E7215000DFA676 /* SKClient.m */; };
 		E32B4C7418E7282F00DFA676 /* SKListing.m in Sources */ = {isa = PBXBuildFile; fileRef = E32B4C7318E7282F00DFA676 /* SKListing.m */; };
 		E32B4C7718E729D300DFA676 /* SKListingMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = E32B4C7618E729D300DFA676 /* SKListingMedia.m */; };
+		E353FCB21903EE7C00A45413 /* FlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E353FCB11903EE7C00A45413 /* FlatButton.m */; };
 		E37107F218E74C84001277DA /* ExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E37107F118E74C84001277DA /* ExploreViewController.m */; };
 		E37BD66318F33BEA00FA250D /* DefaultNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E37BD66218F33BEA00FA250D /* DefaultNavigationController.m */; };
 		E37BD66618F3472E00FA250D /* BaseRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E37BD66518F3472E00FA250D /* BaseRootViewController.m */; };
@@ -69,6 +70,9 @@
 		E3EBBEC718D610F2006659B4 /* UIView+RoundedFrameOrigin.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EBBEB618D610F2006659B4 /* UIView+RoundedFrameOrigin.m */; };
 		E3EBBEC818D610F2006659B4 /* UIViewController+ScreenShot.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EBBEB818D610F2006659B4 /* UIViewController+ScreenShot.m */; };
 		E3F5CEB518F3388A00A74B53 /* DefaultNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F5CEB418F3388A00A74B53 /* DefaultNavigationBar.m */; };
+		E3FCAC94190424DA006A22A1 /* SegmentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FCAC93190424DA006A22A1 /* SegmentedViewController.m */; };
+		E3FCAC98190440A0006A22A1 /* ProductDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FCAC97190440A0006A22A1 /* ProductDescriptionViewController.m */; };
+		E3FCAC9B190444A1006A22A1 /* ShipingDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FCAC9A190444A1006A22A1 /* ShipingDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +121,8 @@
 		E32B4C7318E7282F00DFA676 /* SKListing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKListing.m; sourceTree = "<group>"; };
 		E32B4C7518E729D300DFA676 /* SKListingMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKListingMedia.h; sourceTree = "<group>"; };
 		E32B4C7618E729D300DFA676 /* SKListingMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKListingMedia.m; sourceTree = "<group>"; };
+		E353FCB01903EE7C00A45413 /* FlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlatButton.h; sourceTree = "<group>"; };
+		E353FCB11903EE7C00A45413 /* FlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlatButton.m; sourceTree = "<group>"; };
 		E37107F018E74C84001277DA /* ExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreViewController.h; sourceTree = "<group>"; };
 		E37107F118E74C84001277DA /* ExploreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExploreViewController.m; sourceTree = "<group>"; };
 		E37BD66118F33BEA00FA250D /* DefaultNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultNavigationController.h; sourceTree = "<group>"; };
@@ -199,6 +205,12 @@
 		E3EBBEB818D610F2006659B4 /* UIViewController+ScreenShot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ScreenShot.m"; sourceTree = "<group>"; };
 		E3F5CEB318F3388A00A74B53 /* DefaultNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultNavigationBar.h; sourceTree = "<group>"; };
 		E3F5CEB418F3388A00A74B53 /* DefaultNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultNavigationBar.m; sourceTree = "<group>"; };
+		E3FCAC92190424DA006A22A1 /* SegmentedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentedViewController.h; sourceTree = "<group>"; };
+		E3FCAC93190424DA006A22A1 /* SegmentedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentedViewController.m; sourceTree = "<group>"; };
+		E3FCAC96190440A0006A22A1 /* ProductDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDescriptionViewController.h; sourceTree = "<group>"; };
+		E3FCAC97190440A0006A22A1 /* ProductDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDescriptionViewController.m; sourceTree = "<group>"; };
+		E3FCAC99190444A1006A22A1 /* ShipingDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShipingDetailsViewController.h; sourceTree = "<group>"; };
+		E3FCAC9A190444A1006A22A1 /* ShipingDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShipingDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,8 +240,11 @@
 		E3094B8618FAE8FA00991D5B /* listingDetail */ = {
 			isa = PBXGroup;
 			children = (
+				E3FCAC9519044079006A22A1 /* segments */,
 				E3094B8718FAE92400991D5B /* ListingDetailViewController.h */,
 				E3094B8818FAE92400991D5B /* ListingDetailViewController.m */,
+				E3FCAC92190424DA006A22A1 /* SegmentedViewController.h */,
+				E3FCAC93190424DA006A22A1 /* SegmentedViewController.m */,
 			);
 			name = listingDetail;
 			sourceTree = "<group>";
@@ -355,6 +370,8 @@
 				E37BD66518F3472E00FA250D /* BaseRootViewController.m */,
 				E37BD66718F34D4000FA250D /* UINavigationItem+Attributes.h */,
 				E37BD66818F34D4000FA250D /* UINavigationItem+Attributes.m */,
+				E353FCB01903EE7C00A45413 /* FlatButton.h */,
+				E353FCB11903EE7C00A45413 /* FlatButton.m */,
 			);
 			path = "skylark-ios";
 			sourceTree = "<group>";
@@ -458,6 +475,17 @@
 				E3EBBEB818D610F2006659B4 /* UIViewController+ScreenShot.m */,
 			);
 			path = utilities;
+			sourceTree = "<group>";
+		};
+		E3FCAC9519044079006A22A1 /* segments */ = {
+			isa = PBXGroup;
+			children = (
+				E3FCAC96190440A0006A22A1 /* ProductDescriptionViewController.h */,
+				E3FCAC97190440A0006A22A1 /* ProductDescriptionViewController.m */,
+				E3FCAC99190444A1006A22A1 /* ShipingDetailsViewController.h */,
+				E3FCAC9A190444A1006A22A1 /* ShipingDetailsViewController.m */,
+			);
+			name = segments;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -572,10 +600,13 @@
 				E32B4C6A18E6FA3A00DFA676 /* AFURLSessionManager.m in Sources */,
 				E37BD66618F3472E00FA250D /* BaseRootViewController.m in Sources */,
 				E3094B8918FAE92400991D5B /* ListingDetailViewController.m in Sources */,
+				E3FCAC9B190444A1006A22A1 /* ShipingDetailsViewController.m in Sources */,
 				E3B086D618E851570022734B /* UIRefreshControl+AFNetworking.m in Sources */,
+				E3FCAC98190440A0006A22A1 /* ProductDescriptionViewController.m in Sources */,
 				E3B086D018E851570022734B /* AFNetworkActivityIndicatorManager.m in Sources */,
 				E3094B8518FAE84C00991D5B /* GalleryViewController.m in Sources */,
 				E3EBBEBE18D610F2006659B4 /* NSString+HTML.m in Sources */,
+				E3FCAC94190424DA006A22A1 /* SegmentedViewController.m in Sources */,
 				E3EBBEBF18D610F2006659B4 /* NSURL+Parameters.m in Sources */,
 				E37BD66318F33BEA00FA250D /* DefaultNavigationController.m in Sources */,
 				E3B086D418E851570022734B /* UIImageView+AFNetworking.m in Sources */,
@@ -594,6 +625,7 @@
 				E3EBBEC018D610F2006659B4 /* UIButton+HitArea.m in Sources */,
 				E3B086D218E851570022734B /* UIAlertView+AFNetworking.m in Sources */,
 				E32B4C7118E7215000DFA676 /* SKClient.m in Sources */,
+				E353FCB21903EE7C00A45413 /* FlatButton.m in Sources */,
 				E38C9C0118D5E863007D7A46 /* main.m in Sources */,
 				E32B4C6418E6FA3A00DFA676 /* AFHTTPSessionManager.m in Sources */,
 				E3EBBEC118D610F2006659B4 /* UIColor+Hex.m in Sources */,
